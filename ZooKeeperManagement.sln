@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooKeeper.WebUI", "ZooKeeper.WebUI\ZooKeeper.WebUI.csproj", "{53410E75-92AB-4437-B782-D47EB3ED1F14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooKeeper.WebSvc", "ZooKeeper.WebSvc\ZooKeeper.WebSvc.csproj", "{EA3D6652-4843-49E3-9C76-C70A76A8B652}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooKeeper.Domain", "ZooKeeper.Domain\ZooKeeper.Domain.csproj", "{07AC7583-E265-4D04-AFD5-9C279544FDF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53410E75-92AB-4437-B782-D47EB3ED1F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53410E75-92AB-4437-B782-D47EB3ED1F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53410E75-92AB-4437-B782-D47EB3ED1F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53410E75-92AB-4437-B782-D47EB3ED1F14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA3D6652-4843-49E3-9C76-C70A76A8B652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA3D6652-4843-49E3-9C76-C70A76A8B652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA3D6652-4843-49E3-9C76-C70A76A8B652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA3D6652-4843-49E3-9C76-C70A76A8B652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07AC7583-E265-4D04-AFD5-9C279544FDF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07AC7583-E265-4D04-AFD5-9C279544FDF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07AC7583-E265-4D04-AFD5-9C279544FDF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07AC7583-E265-4D04-AFD5-9C279544FDF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
