@@ -1,0 +1,37 @@
+﻿@model ZooKeeper.WebUI.Models.Animal
+
+@{
+    ViewBag.Title = "Create New Animal";
+}
+
+<div class="panel">
+    <div class="panel-heading">
+        <h3>Create new animal</h3>
+    </div>
+    @using (Html.BeginForm("Create", "Animal", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="panel-body">
+            <div class="form-group">
+                <label>@Html.DisplayNameFor(model => model.AnimalID)</label>
+                @Html.TextBoxFor(model => model.AnimalID, null, new { @class = "form-control" })
+                <label>@Html.DisplayNameFor(model => model.AnimalType)</label>
+                @Html.TextBoxFor(model => model.AnimalType, null, new { @class = "form-control" })
+                <label>@Html.DisplayNameFor(model => model.NickName)</label>
+                @Html.TextBoxFor(model => model.NickName, null, new { @class = "form-control" })
+                <label>@Html.DisplayNameFor(model => model.Age)</label>
+                @Html.TextBoxFor(model => model.Age, null, new { @class = "form-control" })
+                <label>@Html.DisplayNameFor(model => model.Gender)</label>
+                @Html.DropDownListFor(m => m.Gender, new SelectList(Enum.GetNames(typeof(ZooKeeper.WebUI.Models.Gender))),
+                    null, new { @class = "form-control" })
+                <label>@Html.DisplayNameFor(model => model.StaffID)</label>
+                @Html.DropDownListFor(m => m.StaffID, new SelectList(ViewBag.ZookeeperSelection, "Value", "Text"),
+                    null, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="panel-footer">
+            <input type="submit" value="Save" class="btn btn-primary" />
+            @Html.ActionLink("Cancel and return to List", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>
+

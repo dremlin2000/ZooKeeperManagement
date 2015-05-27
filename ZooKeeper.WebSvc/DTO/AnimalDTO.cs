@@ -7,7 +7,14 @@ using System.Web;
 namespace ZooKeeper.WebSvc.DTO
 {
     [DataContract]
-    public enum Gender { Male, Female }
+    public enum Gender 
+    {
+        [EnumMember]
+        Male,
+        [EnumMember]
+        Female 
+    }
+
     [DataContract]
     public class AnimalDTO
     {

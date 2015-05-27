@@ -18,7 +18,8 @@ namespace ZooKeeper.WebUI.Models
         public int Age { get; set; }
         [Display(Name = "Gender")]
         public Gender Gender { get; set; }
-        public Zookeeper Zookeeper { get; set; }
+        [Display(Name = "Staff ID")]
+        public string StaffID { get; set; }
     }
 
     public enum Gender { Male, Female }

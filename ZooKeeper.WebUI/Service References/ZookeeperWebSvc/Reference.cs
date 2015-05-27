@@ -157,7 +157,7 @@ namespace ZooKeeper.WebUI.ZookeeperWebSvc {
         private string AnimalTypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string GenderField;
+        private ZooKeeper.WebUI.ZookeeperWebSvc.Gender GenderField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NickNameField;
@@ -214,13 +214,13 @@ namespace ZooKeeper.WebUI.ZookeeperWebSvc {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Gender {
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ZooKeeper.WebUI.ZookeeperWebSvc.Gender Gender {
             get {
                 return this.GenderField;
             }
             set {
-                if ((object.ReferenceEquals(this.GenderField, value) != true)) {
+                if ((this.GenderField.Equals(value) != true)) {
                     this.GenderField = value;
                     this.RaisePropertyChanged("Gender");
                 }
@@ -261,6 +261,17 @@ namespace ZooKeeper.WebUI.ZookeeperWebSvc {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Gender", Namespace="http://schemas.datacontract.org/2004/07/ZooKeeper.WebSvc.DTO")]
+    public enum Gender : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Male = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Female = 1,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]

@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<ZooKeeper.WebUI.Models.Animal>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Animals";
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-sm btn-primary" })
 </p>
 <table class="table">
     <tr>
@@ -21,7 +21,10 @@
             @Html.DisplayNameFor(model => model.Age)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ZookeeperId)
+            @Html.DisplayNameFor(model => model.StaffID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
         </th>
         <th></th>
     </tr>
@@ -38,12 +41,10 @@
             @Html.DisplayFor(modelItem => item.Age)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ZookeeperId)
+            @Html.DisplayFor(modelItem => item.StaffID)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.AnimalID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.AnimalID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AnimalID })
+            @Html.DisplayFor(modelItem => item.Gender)
         </td>
     </tr>
 }

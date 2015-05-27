@@ -32,23 +32,14 @@ namespace ZooKeeper.WebSvc
 
         public IEnumerable<DTO.ZookeeperDTO> GetZookepers()
         {
-            return _repository.Zookeepers.Select(
-                x => new DTO.ZookeeperDTO
-                {
-                    StaffID = x.StaffID,
-                    FirstName = x.FirstName,
-                    LastName = x.LastName,
-                    Email = x.Email,
-                    DateOfBirth = x.DateOfBirth,
-                    PhoneNumber = x.PhoneNumber
-                });
+            Mapper.CreateMap<Zookeeper, DTO.ZookeeperDTO>();
+            return Mapper.Map<Zookeeper[], DTO.ZookeeperDTO[]>(_repository.Zookeepers.ToArray<Zookeeper>());
         }
 
         public IEnumerable<DTO.AnimalDTO> GetAnimals()
         {
             Mapper.CreateMap<Animal, DTO.AnimalDTO>();
-            DTO.AnimalDTO[] animals = Mapper.Map<Animal[], DTO.AnimalDTO[]>(_repository.Animals.ToArray<Animal>());
-            return animals;
+            return Mapper.Map<Animal[], DTO.AnimalDTO[]>(_repository.Animals.ToArray<Animal>());
         }
 
 
@@ -65,7 +56,8 @@ namespace ZooKeeper.WebSvc
 
         public void SaveAnimal(DTO.AnimalDTO animalDTO)
         {
-            throw new NotImplementedException();
+            Mapper.CreateMap<DTO.AnimalDTO, Domain.Entities.Animal>();
+            _repository.SaveAnimal(Mapper.Map<Domain.Entities.Animal>(animalDTO));
         }
 
         public void DeleteAnimal(string animalId)
