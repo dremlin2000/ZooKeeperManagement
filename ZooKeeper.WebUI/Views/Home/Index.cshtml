@@ -3,29 +3,63 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Zoo Keeper Management</h1>
+    <p class="lead">ASP.NET MVC application for jaythom.com.au</p>
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
+    <div class="col-md-12">
+        <h3>Overview</h3>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            This system will be used to manage Zookeeper and Animal. Each animal is looked after by one zookeeper. Zoo management require a system to record and display the list of animal and zookeeper.
+            The following information is required for Zookeeper:
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <ul>
+            <li>Staff ID (6 Digits Alpha Numeric Code)</li>
+            <li>First name (Text)</li>
+            <li>Last name (Text)</li>
+            <li>Phone number (Text)</li>
+            <li>Date of Birth (Date)</li>
+            <li>Email (Text)</li>
+        </ul>
+        <p>The following information is required for Animal:</p>
+        <ul>
+            <li>Animal ID (6 Digits Alpha Numeric Code)</li>
+            <li>Animal Type (Text)  (i.e. Tiger, Elephant, Giraffe, Monkey, Lion, Lamb, Wolf, Bat, Butterfly, Bison, Pig, Snake, Lima, Camel)</li>
+            <li>Nickname (Text)</li>
+            <li>Age (Number)</li>
+            <li>Gender (Male / Female)</li>
+            <li>Zookeeper (Foreign Key)</li>
+        </ul>
+        <h3>Solution Requirements</h3>
+        <ol>
+            <li>Solution must be built on the following technology / platform
+                <ol type="a">
+                    <li>.NET 4.5 Framework C#</li>
+                    <li>SQL Server Database </li>
+                </ol>
+            </li>
+            <li>A Web Service (WCF or Web API) to Create and Retrieve Zookeeper and Animal data from a Database. It is recommended to use Entity Framework (code first).</li>
+            <li>Create a Website (ASP.NET or MVC). Website should utilize the web service to retrieve and store the data.
+                <ol type="a">
+                    <li>Intuitive User Interface</li>
+                    <li>Mobile friendly (preferably responsive design)</li>
+                    <li>
+                        In Zookeeper area the user should be able to
+                        <ol type="i">
+                            <li>List all available Zookeeper with all their information.</li>
+                            <li>Add new Zookeeper record.</li>
+                        </ol>
+                    </li>
+                    <li>
+                        In Animal area the user should be able to
+                        <ol type="i">
+                            <li>List all available Animals with all their information.</li>
+                            <li>Add new Animal record and assign Zookeeper to the animal.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
     </div>
 </div>

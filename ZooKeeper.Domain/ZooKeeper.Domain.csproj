@@ -55,6 +55,18 @@
     <Compile Include="Migrations\201505262359597_Initial.Designer.cs">
       <DependentUpon>201505262359597_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505270543251_NextMigration.cs" />
+    <Compile Include="Migrations\201505270543251_NextMigration.Designer.cs">
+      <DependentUpon>201505270543251_NextMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505270704198_NextMigration1.cs" />
+    <Compile Include="Migrations\201505270704198_NextMigration1.Designer.cs">
+      <DependentUpon>201505270704198_NextMigration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505270709403_next.cs" />
+    <Compile Include="Migrations\201505270709403_next.Designer.cs">
+      <DependentUpon>201505270709403_next.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -65,6 +77,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201505262359597_Initial.resx">
       <DependentUpon>201505262359597_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505270543251_NextMigration.resx">
+      <DependentUpon>201505270543251_NextMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505270704198_NextMigration1.resx">
+      <DependentUpon>201505270704198_NextMigration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505270709403_next.resx">
+      <DependentUpon>201505270709403_next.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -18,7 +18,7 @@ namespace ZooKeeper.WebSvc.DTO
         [DataMember]
         public string PhoneNumber { get; set; }
         [DataMember]
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         [DataMember]
         public string Email { get; set; }
     }

@@ -22,6 +22,6 @@ namespace ZooKeeper.WebSvc.DTO
         [DataMember]
         public Gender Gender { get; set; }
         [DataMember]
-        public int ZookeeperId { get; set; }
+        public string StaffID { get; set; }
     }
 }

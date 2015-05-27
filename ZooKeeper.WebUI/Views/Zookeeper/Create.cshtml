@@ -1,0 +1,35 @@
+﻿@model ZooKeeper.WebUI.Models.Zookeeper
+
+@{
+    ViewBag.Title = "Create New Zookeper";
+}
+
+<div class="panel">
+    <div class="panel-heading">
+        <h3>Create new zookeeper</h3>
+    </div>
+    @using (Html.BeginForm("Create", "Zookeeper", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {        
+        <div class="panel-body">
+            <div class="form-group">
+                <label>@Html.DisplayNameFor(model => model.StaffID)</label>
+                @Html.TextBoxFor(model => model.StaffID, null, new { @class = "form-control" })
+                <label>@Html.DisplayNameFor(model => model.FirstName)</label>
+                @Html.TextBoxFor(model => model.FirstName, null, new { @class = "form-control" })
+                <label>@Html.DisplayNameFor(model => model.LastName)</label>
+                @Html.TextBoxFor(model => model.LastName, null, new { @class = "form-control" })
+                <label>@Html.DisplayNameFor(model => model.PhoneNumber)</label>
+                @Html.TextBoxFor(model => model.PhoneNumber, null, new { @class = "form-control" })
+                <label>@Html.DisplayNameFor(model => model.DateOfBirth)</label>
+                @Html.TextBoxFor(model => model.DateOfBirth, null, new { @class = "form-control" })
+                <label>@Html.DisplayNameFor(model => model.Email)</label>
+                @Html.TextBoxFor(model => model.Email, null, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="panel-footer">
+            <input type="submit" value="Save" class="btn btn-primary" />
+            @Html.ActionLink("Cancel and return to List", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>
+

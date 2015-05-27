@@ -23,7 +23,7 @@ namespace ZooKeeper.WebUI.ZookeeperWebSvc {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime DateOfBirthField;
+        private System.Nullable<System.DateTime> DateOfBirthField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EmailField;
@@ -51,7 +51,7 @@ namespace ZooKeeper.WebUI.ZookeeperWebSvc {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime DateOfBirth {
+        public System.Nullable<System.DateTime> DateOfBirth {
             get {
                 return this.DateOfBirthField;
             }
@@ -163,7 +163,7 @@ namespace ZooKeeper.WebUI.ZookeeperWebSvc {
         private string NickNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ZookeeperIdField;
+        private string StaffIDField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -241,14 +241,14 @@ namespace ZooKeeper.WebUI.ZookeeperWebSvc {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ZookeeperId {
+        public string StaffID {
             get {
-                return this.ZookeeperIdField;
+                return this.StaffIDField;
             }
             set {
-                if ((this.ZookeeperIdField.Equals(value) != true)) {
-                    this.ZookeeperIdField = value;
-                    this.RaisePropertyChanged("ZookeeperId");
+                if ((object.ReferenceEquals(this.StaffIDField, value) != true)) {
+                    this.StaffIDField = value;
+                    this.RaisePropertyChanged("StaffID");
                 }
             }
         }

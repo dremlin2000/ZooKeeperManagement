@@ -8,7 +8,7 @@
   <xs:element name="ArrayOfZookeeperDTO" nillable="true" type="tns:ArrayOfZookeeperDTO" />
   <xs:complexType name="ZookeeperDTO">
     <xs:sequence>
-      <xs:element minOccurs="0" name="DateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateOfBirth" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
@@ -30,7 +30,7 @@
       <xs:element minOccurs="0" name="AnimalType" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Gender" type="tns:Gender" />
       <xs:element minOccurs="0" name="NickName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ZookeeperId" type="xs:int" />
+      <xs:element minOccurs="0" name="StaffID" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="AnimalDTO" nillable="true" type="tns:AnimalDTO" />

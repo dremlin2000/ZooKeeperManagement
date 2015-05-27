@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -6,6 +7,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using ZooKeeper.Domain.Abstract;
+using ZooKeeper.Domain.Entities;
 
 namespace ZooKeeper.WebSvc
 {
@@ -44,13 +46,16 @@ namespace ZooKeeper.WebSvc
 
         public IEnumerable<DTO.AnimalDTO> GetAnimals()
         {
-            throw new NotImplementedException();
+            Mapper.CreateMap<Animal, DTO.AnimalDTO>();
+            DTO.AnimalDTO[] animals = Mapper.Map<Animal[], DTO.AnimalDTO[]>(_repository.Animals.ToArray<Animal>());
+            return animals;
         }
 
 
         public void SaveZookeper(DTO.ZookeeperDTO zookeeperDTO)
         {
-            throw new NotImplementedException();
+            Mapper.CreateMap<DTO.ZookeeperDTO, Domain.Entities.Zookeeper>();
+            _repository.SaveZookeeper(Mapper.Map<Domain.Entities.Zookeeper>(zookeeperDTO));
         }
 
         public void DeleteZookeper(string staffId)
