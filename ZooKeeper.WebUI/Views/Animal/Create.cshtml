@@ -10,6 +10,7 @@
     </div>
     @using (Html.BeginForm("Create", "Animal", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
+        @Html.ValidationSummary()
         <div class="panel-body">
             <div class="form-group">
                 <label>@Html.DisplayNameFor(model => model.AnimalID)</label>
@@ -19,7 +20,7 @@
                 <label>@Html.DisplayNameFor(model => model.NickName)</label>
                 @Html.TextBoxFor(model => model.NickName, null, new { @class = "form-control" })
                 <label>@Html.DisplayNameFor(model => model.Age)</label>
-                @Html.TextBoxFor(model => model.Age, null, new { @class = "form-control" })
+                @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control" }, })
                 <label>@Html.DisplayNameFor(model => model.Gender)</label>
                 @Html.DropDownListFor(m => m.Gender, new SelectList(Enum.GetNames(typeof(ZooKeeper.WebUI.Models.Gender))),
                     null, new { @class = "form-control" })

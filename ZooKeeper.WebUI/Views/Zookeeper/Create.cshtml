@@ -9,27 +9,38 @@
         <h3>Create new zookeeper</h3>
     </div>
     @using (Html.BeginForm("Create", "Zookeeper", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    {        
+    {
+        @Html.ValidationSummary()
         <div class="panel-body">
-            <div class="form-group">
-                <label>@Html.DisplayNameFor(model => model.StaffID)</label>
-                @Html.TextBoxFor(model => model.StaffID, null, new { @class = "form-control" })
-                <label>@Html.DisplayNameFor(model => model.FirstName)</label>
-                @Html.TextBoxFor(model => model.FirstName, null, new { @class = "form-control" })
-                <label>@Html.DisplayNameFor(model => model.LastName)</label>
-                @Html.TextBoxFor(model => model.LastName, null, new { @class = "form-control" })
-                <label>@Html.DisplayNameFor(model => model.PhoneNumber)</label>
-                @Html.TextBoxFor(model => model.PhoneNumber, null, new { @class = "form-control" })
-                <label>@Html.DisplayNameFor(model => model.DateOfBirth)</label>
-                @Html.TextBoxFor(model => model.DateOfBirth, null, new { @class = "form-control" })
-                <label>@Html.DisplayNameFor(model => model.Email)</label>
-                @Html.TextBoxFor(model => model.Email, null, new { @class = "form-control" })
+            <div class="row">
+                <div class="container">
+                    
+                    <div class="form-group">
+                        <label>@Html.DisplayNameFor(model => model.StaffID)</label>
+                        @Html.TextBoxFor(model => model.StaffID, null, new { @class = "form-control" })
+                        <label>@Html.DisplayNameFor(model => model.FirstName)</label>
+                        @Html.TextBoxFor(model => model.FirstName, null, new { @class = "form-control" })
+                        <label>@Html.DisplayNameFor(model => model.LastName)</label>
+                        @Html.TextBoxFor(model => model.LastName, null, new { @class = "form-control" })
+                        <label>@Html.DisplayNameFor(model => model.PhoneNumber)</label>
+                        @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" }, })
+                        <div class="row">
+                            <div class="col-md-10">
+                                <label>@Html.DisplayNameFor(model => model.DateOfBirth)</label>
+                                @Html.TextBoxFor(model => model.DateOfBirth, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <label>@Html.DisplayNameFor(model => model.Email)</label>
+                       @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" }, })
+                    </div>
+                        
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="panel-footer">
-            <input type="submit" value="Save" class="btn btn-primary" />
-            @Html.ActionLink("Cancel and return to List", "Index", null, new { @class = "btn btn-default" })
-        </div>
-    }
-</div>
+            <div class="panel-footer">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                @Html.ActionLink("Cancel and return to List", "Index", null, new { @class = "btn btn-default" })
+            </div>
+        }
+    </div>
 
