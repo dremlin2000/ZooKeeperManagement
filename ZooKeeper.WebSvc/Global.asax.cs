@@ -16,7 +16,7 @@ namespace ZooKeeper.WebSvc
         protected override IKernel CreateKernel()
         {
             var kernel = new StandardKernel();
-            kernel.Bind<IZooKeeperRepository>().To<ZooKeeperRepository>().InSingletonScope();
+            kernel.Bind<IZooKeeperRepository>().To<ZooKeeperRepository>();
             return kernel;
         }
 

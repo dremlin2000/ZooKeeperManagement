@@ -139,7 +139,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Animal.cs" />
-    <Compile Include="Models\AnimalViewModel.cs" />
     <Compile Include="Models\Zookeeper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\ZookeeperWebSvc\Reference.cs">
@@ -227,7 +226,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

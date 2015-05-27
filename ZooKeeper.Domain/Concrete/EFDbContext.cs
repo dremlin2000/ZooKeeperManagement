@@ -8,6 +8,7 @@ using ZooKeeper.Domain.Entities;
 
 namespace ZooKeeper.Domain.Concrete
 {
+    //Entity Framework database context class
     public class EFDbContext : DbContext
     {
         public DbSet<Zookeeper> Zookeepers { get; set; }

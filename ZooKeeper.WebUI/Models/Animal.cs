@@ -6,6 +6,7 @@ using System.Web;
 
 namespace ZooKeeper.WebUI.Models
 {
+    //Animal view model
     public class Animal
     {
         [MaxLength(6)]
