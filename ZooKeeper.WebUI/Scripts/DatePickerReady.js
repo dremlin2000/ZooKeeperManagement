@@ -4,13 +4,15 @@
         minDate: '01.01.1900'
     });
 
-    jQuery.validator.methods.date = function (value, element) {
-        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-        if (isChrome) {
-            var d = new Date();
-            return this.optional(element) || !/Invalid|NaN/.test(new Date(d.toLocaleDateString(value)));
-        } else {
-            return this.optional(element) || !/Invalid|NaN/.test(new Date(value));
-        }
-    };
+    $.validator.addMethod(
+         "date",
+         function (value, element) {
+             var bits = value.match(/([0-9]+)/gi), str;
+             if (!bits)
+                 return this.optional(element) || false;
+             str = bits[1] + '/' + bits[0] + '/' + bits[2];
+             return this.optional(element) || !/Invalid|NaN/.test(new Date(str));
+         },
+         "Please enter a date in the format dd/mm/yyyy"
+     );
 });

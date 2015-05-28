@@ -25,7 +25,8 @@ namespace ZooKeeper.WebUI.Models
         public string PhoneNumber { get; set; }
         [Required(ErrorMessage = "The DOB is mandatory")]
         [Display(Name = "Date Of Birth")]
-        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DateOfBirth { get; set; }
         [Display(Name = "Email")]
         [Required(ErrorMessage = "The email address is mandatory")]
