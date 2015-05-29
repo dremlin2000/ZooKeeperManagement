@@ -1,7 +1,7 @@
-﻿$(function () {
+﻿$(document).ready(function () {
     $('#DateOfBirth').datetimepicker({
         format: 'DD/MM/YYYY',
-        minDate: '01.01.1900'
+        minDate: '01/01/1900'
     });
 
     $.validator.addMethod(
